@@ -1,0 +1,8 @@
+-Những đường dẫn này cần được thêm vào vì chúng là các tệp do Eclipse tạo ra để chạy chương trình trong bản thân máy của chúng ta thôi chứ nó không nên đẩy lên github.
+Và nếu không thêm thì sẽ làm rác kho chứa do chứa các file biên dịch không nên có, hoặc có thể gây xung đột với các file khác.
+
+-Nếu sử dụng các công cụ khác để lập trình thì ta có thể thêm một số đường dẫn sau với:
++VS code :  .vscode/, lib/, bin/
++IntelliJ IDEA : .idea/, *.iml, out/
+
+-Em nghĩ khi lỡ thêm ta có thể thêm thư mục .gitignore chứa các đường dẫn cần loại bỏ vào, xong sử dụng một lệnh trong git để xoá các file chứa đường dẫn đó.
