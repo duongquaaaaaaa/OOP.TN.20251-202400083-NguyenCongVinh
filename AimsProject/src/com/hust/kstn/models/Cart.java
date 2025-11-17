@@ -1,6 +1,5 @@
 package com.hust.kstn.models;
 
-import org.w3c.dom.css.DOMImplementationCSS;
 
 public class Cart {
 	private static final int  MAX_NUMBER_ORDERED = 20;
