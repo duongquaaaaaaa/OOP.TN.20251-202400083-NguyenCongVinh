@@ -1,5 +1,7 @@
 package com.hust.kstn.models;
 
+import org.w3c.dom.css.DOMImplementationCSS;
+
 public class Cart {
 	private static final int  MAX_NUMBER_ORDERED = 20;
 	private int qtyOrdered;
@@ -37,6 +39,30 @@ public class Cart {
 		}
 		itemsInCart[qtyOrdered++]=disc;
 		System.out.println("The disc has been added sucessfully");
+	}
+	
+	public void addDVD(DigitalVideoDisc disc1, DigitalVideoDisc disc2)
+	{	
+		if(qtyOrdered==MAX_NUMBER_ORDERED)
+		{
+			 System.out.println("The cart is almost full");
+	         return;
+		}
+		addDVD(disc1);
+		addDVD(disc2);
+	}
+	
+	public void addDVD(DigitalVideoDisc[] dvdList)
+	{
+		for(int i=0;i<dvdList.length;i++)
+		{
+			if(qtyOrdered==MAX_NUMBER_ORDERED)
+			{
+				 System.out.println("The cart is almost full");
+		         return;
+			}
+			addDVD(dvdList[i]);
+		}
 	}
 	
 	public double calculateTotalCost()
