@@ -3,7 +3,7 @@ package com.hust.kstn.models;
 
 public class Cart {
 	private static final int  MAX_NUMBER_ORDERED = 20;
-	private int qtyOrdered;
+	private int qtyOrdered=0;
 	private DigitalVideoDisc[] itemsInCart = new DigitalVideoDisc[MAX_NUMBER_ORDERED];
 	
 	
@@ -87,7 +87,7 @@ public class Cart {
 		 System.out.println("Total items: "+ qtyOrdered);
 		 
 		 for(int i=0;i<qtyOrdered;i++) 
-			 System.out.println(itemsInCart[i].ToString());
+			 System.out.println(itemsInCart[i].toString());
 		 
 		  System.out.println("Subtotal: " + calculateTotalCost() + "$");
 		 

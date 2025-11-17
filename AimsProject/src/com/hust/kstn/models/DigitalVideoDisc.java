@@ -60,7 +60,7 @@ public class DigitalVideoDisc {
 		this.id=++nbDigitalVideoDiscs;
 	}
 	
-	public String ToString() {
+	public String toString() {
 		return "- DVD" + "["+this.id+"] - " + "["+this.title+"] - " + "["+this.cost+"] - "
 				       + "["+this.length+"] - " + "["+this.category+"] - " + "["+this.director+"]";
 	}
