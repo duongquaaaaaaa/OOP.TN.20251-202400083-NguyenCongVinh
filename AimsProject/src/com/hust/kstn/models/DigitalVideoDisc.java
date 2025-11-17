@@ -56,7 +56,13 @@ public class DigitalVideoDisc {
 	
 	public DigitalVideoDisc(String title)
 	{
-	this.title=title;
-	this.id=++nbDigitalVideoDiscs;
+		this.title=title;
+		this.id=++nbDigitalVideoDiscs;
 	}
-}
+	
+	public String ToString() {
+		return "- DVD" + "["+this.id+"] - " + "["+this.title+"] - " + "["+this.cost+"] - "
+				       + "["+this.length+"] - " + "["+this.category+"] - " + "["+this.director+"]";
+	}
+	
+	}
