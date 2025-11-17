@@ -1,0 +1,3 @@
+-Khi thêm phương thức đó vào lớp Cart thì sẽ xảy ra lỗi, do phương thức này đã xảy ra xung đột trùng lặp phương thức với addDVD(DigitalVideoDisc[] discs).
+
+-Em chọn giải quyết bằng cách giữ lại phương thức addDVD(DigitalVideoDisc …discs), do nó linh hoạt hơn khi gọi so với phương thức kia.
