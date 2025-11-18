@@ -1,0 +1,42 @@
+-Khi chạy code thì tên của 2 học sinh vẫn không thay đổi, do khi ta gọi hàm swap ta chỉ gọi ra 2 bản sau o1 và o2 của 2 biến nên nó không thay đổi được giá trị thực.
+ ->Từ đó suy ra Java là ngôn ngữ truyền tham trị.
+
+-Vì không thể đổi tham chiếu nên ta sẽ tráo đổi thông tin của chúng, với mỗi lớp sẽ thêm các hàm để lấy thông tin và cập nhật thông tin từ đó ta sẽ có thể lấy thông tin và đổi các thông tin giữa 2 đối tượng trong lớp.
+
+-Sơ đồ minh họa 
+
+Ban đầu 
+
+stack       heap 
+---------------------
+s1          (1, "A")
+s2          (2, "B")
+
+Khi ta dùng các trung gian để lưu các thuộc tính của 1.(gọi nó là temp+...) 
+
+stack       heap 
+----------------------
+s1          (1, "A")
+s2          (2, "B")
+tempStudentId = 1
+tempName = "A"
+
+Sau đó ta sẽ dùng hàm đổi thông tin trong lớp để đổi thông tin của hs1 giống của hs2
+
+stack       heap 
+----------------------
+s1          (2, "B")
+s2          (2, "B")
+tempStudentId = 1
+tempName = "A"
+
+Và cuối cùng ta đổi thông tin của hs2 giống với các biến ta đã lưu thông tin của hs1 từ trước:
+
+stack       heap 
+----------------------
+s1           (2, "B")
+s2           (1, "A")
+tempName = "A"
+tempStudentId = 1
+
+Từ đó ta thấy được ta đã đổi được 2 thông tin của 2 học sinh này cho nhau.
