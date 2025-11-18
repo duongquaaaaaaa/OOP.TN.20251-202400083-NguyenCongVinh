@@ -1,0 +1,1 @@
+Từ khoá super giúp các lớp con trỏ đến đối tượng của lớp cha, giúp các con có thể kế thừa sử dụng các thuộc tính của lớp cha.
