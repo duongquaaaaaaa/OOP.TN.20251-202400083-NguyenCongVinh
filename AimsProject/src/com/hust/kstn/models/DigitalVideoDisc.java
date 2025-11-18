@@ -1,68 +1,28 @@
 package com.hust.kstn.models;
 
-public class DigitalVideoDisc {
-	private String title;
-	private String category;
+public class DigitalVideoDisc extends Disc {
 	private String director;
 	private int length;
-	private double cost;
-	private static int nbDigitalVideoDiscs=0;
-	private int id;
-	public String getTitle() {
-		return title;
-	}
-	public String getCategory() {
-		return category;
-	}
+	
 	public String getDirector() {
 		return director;
 	}
 	public int getLength() {
 		return length;
 	}
-	public double getCost() {
-		return cost;
-	}
-	public int getId() {
-		return id;
-	}
 	
-	public DigitalVideoDisc(String category , String title , double cost)
-	{
-		this.title=title;
-		this.category=category;
-		this.cost=cost;
-		this.id=++nbDigitalVideoDiscs;
-	}
-	
-	public DigitalVideoDisc(String director , String category , String title , double cost)
-	{
-		this.director=director;
-		this.title=title;
-		this.category=category;
-		this.cost=cost;
-		this.id=++nbDigitalVideoDiscs;
-	}
 	
 	public DigitalVideoDisc(String director , String category , String title , int length , double cost)
 	{
+		super(title,cost,category);
 		this.director=director;
-		this.title=title;
-		this.category=category;
 		this.length=length;
-		this.cost=cost;
-		this.id=++nbDigitalVideoDiscs;
 	}
 	
-	public DigitalVideoDisc(String title)
-	{
-		this.title=title;
-		this.id=++nbDigitalVideoDiscs;
-	}
 	
 	public String toString() {
-		return "- DVD" + "["+this.id+"] - " + "["+this.title+"] - " + "["+this.cost+"] - "
-				       + "["+this.length+"] - " + "["+this.category+"] - " + "["+this.director+"]";
+		return super.toString()
+				       + "["+this.length+"] - " + "["+this.director+"]";
 	}
 	
 	}
