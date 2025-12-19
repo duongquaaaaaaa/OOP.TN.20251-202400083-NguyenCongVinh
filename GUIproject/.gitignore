@@ -1,0 +1,15 @@
+/bin/
+*.class
+.settings/
+.classpath
+.project
+.DS_Store
+Thumbs.db
+desktop.ini
+*.jar
+*.war
+*.zip
+*.tar
+*.rar
+*.7z
+*.log
